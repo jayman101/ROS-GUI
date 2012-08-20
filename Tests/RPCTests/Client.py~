@@ -1,0 +1,8 @@
+import xmlrpclib
+
+proxy = xmlrpclib.ServerProxy("http://localhost:%s/" % PORT)
+
+print("Connected. Calling TestFunction..")
+print(proxy.TestFunction("The ships hung in the sky in much the same way that bricks don't."))
+
+print('"Forty-two," said Deep Thought, with infinite majesty and calm.')

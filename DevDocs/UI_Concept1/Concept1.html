@@ -1,0 +1,66 @@
+<html>
+<head>
+  <style type="text/css">
+    .Figures {
+    font-weight:bold;
+    padding-bottom:50px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Application 1 Concept</h1>
+  <br />
+  <p>
+    Application is Modular, and allows for one or more panels / modules to be displayed to the user.
+  </p>
+
+  <p>
+    Each 'Module' contains a 'panel' which can contain many controls such as buttons, dropdowns etc. This is depicted in Figure 1 (below). Additionally, multiple copies of a module may be displayed symaltaniously, in the case that the module may have multiple 'modes' of operation and two or more modes be used at once (ie, an 'arm' module where the robot has many arms). <br />
+  
+    <div id="Figure1" class="Figures">
+      <img src="./StoryBoard/Figure1.png" /><br />
+      Figure 1: Adding a second panel to the application. (Panels are examples only)<br />
+    </div>
+    
+    Panels may be added and removed from the application at runtime, a panel configuration may be 'saved' and 'loaded' similar to a word document. <i> This may be a feature left till last, and done if time permits.</i> <br />
+    </p>
+
+  <p>
+    Each Module may have a variable named HELPDOCUMENT which points to the URI of a HTML page. If present, the Module is added to the Help menu dynamically. 
+    The help document is optional for each module and is intended for user documentation if required. 
+    It may potentially also include not-API developer documentation if required (API-documentation will be auto-generated from in-code comments via Epydoc).    
+    Additionally, each Module may have a menu object labelled topLevelMenu. If the menu object is present/valid, it is added to the top level menu dynamically - an example is depicted in Figure 2.<br />
+
+    <div id="Figure2" class="Figures">
+      <img src="./StoryBoard/Figure2.png" /><br />
+      Figure 2: Before and after adding a module when HELPDOCUMENT exists for both.<br />
+    </div>
+    
+  </p>
+  
+  <p>
+    Panel size will be set on a per-module basis. Panels may not overlap. Panel location may be configured by the panel configuration window. Position and Line may set to move module order, X and Y offset are able to move the absolute location of the panel. This is depicted in Figure 3.
+    
+    <div id="Figure3" class="Figures">
+      <img src="./StoryBoard/Figure3.png" /><br />
+      Figure 3: Panel Configuration window with two instances of 'Navigation' and one of 'Video Stream'<br />
+    </div>
+    
+    
+    If we get time, Multiple windows may be created and panels moved onto these windows, in a similar way to Chrome/Firefox allowing multiple windows with multiple tabs. <i> This feature will be left until last but is actually relatively simple.</i> 
+    
+  </p>
+  
+  <p>
+    Development documentation / Tutorials will be designed with the assumption that the user will *not* be using a layout manager for position / size of the application. 
+    Additionally, it will be assumed that the user will be writing the GUI by hand. Some information on how to use a GUI-Builder may be made available, however this may not be recommended for inexperienced users as Glade / other GUI builders are reasonably complex and may potentially be problematic because of the nature of the applications modularity.  
+  </p>
+
+  <p>
+    <h2>Questions / To be considered</h2>
+    <li>What about Android development, how will the interface be ported. If manual, will it be easy to port modules? Will they be as dynamic?</li>
+  </p>
+</body>
+</html>
